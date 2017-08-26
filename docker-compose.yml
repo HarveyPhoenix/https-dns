@@ -1,0 +1,11 @@
+version: "3"
+services:
+  httpsdns:
+    image: harveyphoenix/https-dns:latest
+    ports:
+      - "127.0.0.1:8001:5353"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
